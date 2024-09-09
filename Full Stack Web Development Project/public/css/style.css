@@ -1,0 +1,351 @@
+/* body
+{
+    font-family: sans-serif;
+    background-color: #dcffef;
+} */
+
+main
+{
+    min-height: calc(100vh - 112px - 96px);
+}
+
+    /* HOMEPAGE */
+    /* Navbar styles */
+    .navbar-logo img{
+        width: 80px;
+    }
+    .navbar-logo {
+        font-size: 25px;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-decoration: none;
+    }
+
+    .navbar-nav a {
+        font-size: 15px;
+        text-transform: uppercase;
+        font-weight: 500;
+        text-decoration: underline;
+    }
+    .navbar-light .navbar-logo:focus,
+    .navbar-light .navbar-logo:hover{
+        color: #000;
+    }
+    .navbar-light .navbar-nav .nav-link{
+        color: #000;
+        text-decoration: none;
+    }
+    .w-100 {
+        height: 100vh;
+    }
+
+
+    /* Carousel Style */
+    .carousel-item {
+        height: 100vh;
+        min-height: 300px;
+    }
+    .carousel-caption{
+        bottom: 200px;
+        z-index: 2;
+    }
+    .carousel-caption h5 {
+        font-size: 45px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-top: 25px;
+    }
+    .carousel-caption p {
+        width: 60%;
+        margin: auto;
+        font-size: 18px;
+        line-height: 1.9;
+    }
+    .carousel-inner::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+
+    /* About Me styles */
+    .problem-explanation{
+        text-align: center;
+        font-family: monospace;
+    }
+    .problem-header{
+        padding-top: 4cm;
+        text-align: center;
+        font-family: GeoEditBold,Franklin Gothic Medium,Franklin Gothic,ITC Franklin Gothic,Helvetica,Arial,sans-serif;
+        letter-spacing: 0.2em;
+    }
+    .section-padding {
+        padding: 100px 0;
+    }
+    .about-text h2 {
+        font-family: GeoEditBold,Franklin Gothic Medium,Franklin Gothic,ITC Franklin Gothic,Helvetica,Arial,sans-serif;
+        letter-spacing: 0.2em;
+    }
+    .img-fluid-1 {
+        height: 250px;
+        width: 416px;
+    }
+    /* Pictures section */
+    .picture-heading1 {
+        text-align: center;
+        font-family: GeoEditBold,Franklin Gothic Medium,Franklin Gothic,ITC Franklin Gothic,Helvetica,Arial,sans-serif;
+    }
+    .pictures1 {
+        border-radius: 15px;
+        border-style: solid;
+        border-color: aqua;
+    }
+    .picture1-caption{
+        text-align: center;
+        font-family: monospace ;
+    }
+    .pictures1-p {
+        text-align: center; 
+        font-family: monospace;
+    }
+    /* Responsive CSS */
+    @media only screen and (min-width:768px) and (max-width:991px) {
+        .carousel-caption{
+            bottom: 370x;
+        }
+        .carousel-caption p {
+            width: 100%;
+            font-size: 20px;
+        }
+        .card{
+            margin-bottom: 30px;
+        }
+        .navbar-nav{
+            text-align: center;
+        }
+        .about-text h2 {
+            margin-top: 50px;
+        }    
+        .img-fluid-1 {
+            height: 464px;
+            width: 696px;
+        }
+        .donation-button {
+            margin-right: 150px;
+        }
+    }
+    @media only screen and (max-width:767px) {
+        .about-text h2 {
+            margin-top: 50px;
+        }
+        .navbar-nav{
+            text-align: center;
+        }
+        .carousel-caption{
+            bottom: 300px;
+        }
+        .carousel-caption h5 {
+            font-size: 30px;
+        }
+        .carousel-caption a {
+            padding: 10px 15px;
+        }
+        .carousel-caption p {
+            width: 100%;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+        .card{
+            margin-bottom: 30px;
+        }
+        .pictures1{
+            margin-top: 13px;
+        }
+        .img-fluid-1 {
+            height: 260px;
+            width: 390px;
+        }
+        .radio-tile-group {
+            margin-top: 100px;
+        }
+        .query {
+            margin-top: 10px;
+        }
+        .dropdown {
+            margin-top: 120px;
+        }
+}
+
+/* Task styles */
+.taskcard {
+    background-color: aliceblue;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    overflow: hidden; /* Ensures the content fits nicely */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover */
+}
+
+.taskcard:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow for hover effect */
+}
+
+.taskcard-body {
+    padding: 15px; /* Spacing inside the card */
+}
+
+.taskcard-title {
+    font-size: 1.25rem; /* Larger title font */
+    margin-bottom: 15px; /* Spacing after the title */
+    color: #333; /* Darker color for text */
+    text-align: center; /* Center the title */
+}
+
+.taskcard-text {
+    line-height: 1.6; /* More readable line height */
+    color: #555; /* Slightly lighter text color for body */
+}
+
+
+/* Loading screen */
+/* Loading screen styles */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+    backdrop-filter: blur(5px); /* Apply a blur effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it's on top of other content */
+}
+
+.loader-image {
+    width: 100px; /* Adjust the image size as needed */
+    height: 100px;
+    animation: spin 2s linear infinite; /* Add a spinning animation to the image */
+}
+
+.loading-text {
+    font-family: sans-serif; /* Use your desired font family */
+    font-size: 20px; /* Adjust the font size as needed */
+    margin-top: 20px; /* Add some margin for spacing */
+    margin-left: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Add task icon */
+#create-task-button {
+    position: fixed;
+    bottom: 200px; /* Adjusted to ensure it's above the footer */
+    right: 200px;
+    z-index: 1000;
+    text-align: center;
+    background-color: rgba(46, 190, 96, 0.5);
+    padding: 10px;
+    border-radius: 15px;
+    border: 3px solid #000;
+}
+
+#create-task-button a {
+    display: block;
+}
+
+#create-task-button img {
+    margin-bottom: 5px; /* Space between image and text */
+    height: 70px;
+    width: 70px;
+}
+
+#create-task-button span {
+    display: block; /* Ensures the text is on a new line under the image */
+    font-size: 15px;
+    font-weight: bold;
+    color: blue;
+}
+
+/* Post card styles */
+.post-card {
+    border: 1px solid #000;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 16px;
+    padding: 0;
+    background-color: white;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.post-card-header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    text-align: center;
+    background-color: #e39ff6;
+}
+
+.post-card-body p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.post-card-footer {
+    background-color: dodgerblue;
+    display: flex;
+    padding-right: 8px; /* Adjust as necessary */
+    margin-right: 0; /* Remove any additional margin if present */
+    align-items: center; /* Centers items vertically if needed */
+    font-weight: 500;
+    font-family: monospace;
+}
+
+.post-card:hover {
+    transform: scale(1.1); /* Slight lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow for hover effect */
+}
+
+/* Add message icon */
+#create-message-button {
+    position: fixed;
+    bottom: 200px; /* Adjusted to ensure it's above the footer */
+    right: 200px;
+    z-index: 1000;
+    text-align: center;
+}
+
+#create-message-button a {
+    display: block;
+}
+
+#create-message-button img {
+    margin-bottom: 5px; /* Space between image and text */
+    height: 70px;
+    width: 70px;
+}
+
+#create-message-button span {
+    display: block; /* Ensures the text is on a new line under the image */
+    font-size: 15px;
+    font-weight: bolder;
+    color: #a32cc4;
+}
+
+/* Profile page styles */
+.profile-image {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.1);
+}
